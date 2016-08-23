@@ -8,6 +8,11 @@
 % Referências bibliográficas
 % ----------------------------------------------------------
 
+% Referências inseridas a partir de referencias.bib
+\renewcommand{\bibname}{Referências} % Atualiza título da seção
+\bibliography{xxx-referencias}
+
+
 $if(referencias_bib)$
 % Referências inseridas a partir de referencias.bib
 \renewcommand{\bibname}{Referências} % Atualiza título da seção
