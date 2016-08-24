@@ -1,9 +1,10 @@
-# Primeiro anexo
+# Questionário para as Dimensões Cognitivas
 
-\lipsum[30]
+O seguinte questionário (em inglês) foi elaborado como uma ferramenta
+para auxiliar na avaliação de usabilidade, utilizando o *Cognitive
+Dimensions of Notations framework*.
 
 
-# Segundo anexo
+\includepdf[pages={-},scale=.8]{docs/CDquestionnaire.pdf}
 
-\lipsum[31]
 

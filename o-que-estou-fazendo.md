@@ -1,9 +1,18 @@
 # O que você está fazendo? Para atingir qual propósito?
 
+## Qua Ago 24 13:38:24 BRT 2016
+
+- Lendo o primeiro artigo de utilização do framework. Para utilizar como trabalho relacionado.
+
+- Como renomear ou criar funções. Para criar um ambiente em portugues no emacs.
+> http://stackoverflow.com/questions/192049/is-it-possible-to-have-an-alias-for-the-function-name-in-lisp
+
+
+
 ## Ter Ago 23 01:21:05 BRT 2016 ##
 
 - É possível edição do arquivo em modo reverso? Para edição deste arquivo.
-> Encontrei dar suporte a uma nova linguagem no Emacs: http://www.wilfred.me.uk/blog/2015/03/19/adding-a-new-language-to-emacs/
+> Encontrei como dar suporte a uma nova linguagem no Emacs: http://www.wilfred.me.uk/blog/2015/03/19/adding-a-new-language-to-emacs/
 
 - Revendo feedback de Álvaro. Para reescrever o trabalho.
 

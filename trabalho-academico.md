@@ -1,66 +1,82 @@
 # Introdução
 
-
-## Motivação
-
-Durante o período de formação superior no Brasil, muitos alunos sofrem
+Durante o período de formação superior no Brasil, muitos alunos *sofrem*
 para elaborar e entregar uma monografia, como requisito para conclusão
 dos estudos. Uma parte desse sofrimento está associada à formatação da
 monografia (no software de editoração) em conformidade com as normas
-da Associação Brasileira de Normas Técnicas (ABNT). O público geral
-costuma utilizar o Word, mas uma parcela menor opta pelo Latex, que
-possui uma curva de aprendizado maior. As linguagens de marcações de
-texto, como o Markdown e similares, surgem como alternativas para
-simplificar a complexidade de formatação de textos.
+da Associação Brasileira de Normas Técnicas (ABNT). 
 
-Essas linguagens de marcação de texto alegam serem mais
-ágeis\footnote{Comparado ao Latex.} para composição de textos, mas não
-encontramos na literatura estudos empíricos para suportar essa
-afirmação, especialmente para formatação com as normas da ABNT.
+O público nacional atualmente possui notadamente duas alternativas
+para formatação de trabalhos acadêmicos: (1) Utilização de um editor
+de texto rico (como o Microsoft Word ou Libre Office) ou (2)
+Utilização do Latex. Embora o Latex possua uma *curva de aprendizado
+maior*, a produção de trabalhos acadêmicos com um editor de texto rico
+exige conhecimentos avançados da ferramenta (tais como utilização de
+estilos, geração de sumário e gerência de referências) ou esforço de
+edição muito grande para formatações manuais de todas as seções do
+trabalho.
 
-O surgimento do pacote Abntex\footnote{http://www.abntex.net.br}
-auxiliou na popularização da utilização do Latex para trabalhos
-acadêmicos no Brasil, ao fornecer estilos e comandos em conformidades
-com as normas da ABNT, mas o equivalente ainda não aconteceu com as
-linguagens de marcação. Não encontramos iniciativas que foram capazes
-de escrever e formatar, com sucesso, monografias em Markdown no país.
+As linguagens de marcação de texto (*lightweight markup language*)
+surgiram, em diferentes contextos, como alternativas para elaboração e
+formatação de textos. Essas linguagens possibilitam os usuários
+redigirem em arquivos somente texto (*plain text*), com uma curva de
+aprendizado menor do que o Latex.
 
-O *Design* simplista do Markdown impõe algumas
-limitações\footnote{Sintaxe original do Markdown
-  \href{https://daringfireball.net/projects/markdown/syntax}.}, uma
-delas é impossibilitar adicionar, simultaneamente, as legendas e
-fontes das Figuras ou Tabelas, exigência das normas da ABNT.
+
+## Motivação
+
+A motivação desse trabalho consiste em ofertar uma nova alternativa
+para elaboração de trabalhos acadêmicos (monografia, dissertação ou
+tese) utilizando uma linguagem de marcação de texto, elaborada com o
+propósito de facilitar os alunos a redigirem e formatarem seus
+trabalhos em conformidade com as Normas da ABNT.
 
 ## Objetivos
 
 ### Objetivo Geral
 
-Esse trabalho objetiva *propor* e *validar a eficácia* de uma
-linguagem de marcação de texto especializada para a produção de
+Esse trabalho objetiva *propor* e *avaliar* um sistema que utiliza
+uma linguagem de marcação de texto especializada para a produção de
 trabalhos acadêmicos em conformidades com as normas da ABNT.
 
 ### Objetivos Específicos
 
-- Avaliar a utilização de linguagens de marcação de texto na
+- Avaliar a utilização de uma linguagem de marcação de texto na
   produção de monografias;
   
-- Avaliar a substituição de utilização de um arquivo de
-  configuraçAo YAML por um documento PDF com formulário.
+- Avaliar a utilização de formulários PDF para edição
+  e configuração de conteúdos específicos dos trabalhos acadêmicos.
 
-- Avaliar a usabilidade da funcionalidade de permitir adicionar
-  referências bibliográficas em qualquer lugar do documento.
 
 ## Método
 
-Essa pesquisa é caracterizada como uma pesquisa primária, de
-experimentos controlados e filosofia positivista.
+Um método de avaliação de um sistema pode ocorrer em três dimensões:
+a) com ou sem o envolvimento ativo dos usuários, b) com ou sem o
+sistema em execução e c) com ou sem um contexto realístico de
+utilização. Além disso, seus os requisitos de avaliação mais comuns
+são: validade analítica, escopo, confiança, produtividade, usabilidade
+e capacidade de aprendê-lo \cite{blandfordann}.
 
-Essa pesquisa utiliza filosofia Pragmática \cite[easterbrook2008selecting],
-ao escolher o método de pesquisa que melhor convém ao pesquisador para
-solucionar o problema em que se depara. 
+<!-- Tese: elaborar uma metodologia para avaliar sistemas para 
+produção de trabalhos acadêmicos.
+
+Ver: Chapter 4
+Ann Blandford and Thomas Green
+Methodological Development -->
+
+Essa pesquisa utilizará uma avaliação *com* envolvimento ativo dos
+usuários, *com* sistema em execução e *sem* um contexto realístico. O
+método de avaliação empregado, utilizando o *Cognitive Dimensions of
+Notations framework*, está descrito no Capítulo 5, junto com a
+descrição do experimento.
+
+<!-- Essa pesquisa utiliza filosofia Pragmática
+\cite[easterbrook2008selecting], ao escolher o método de pesquisa que
+melhor convém ao pesquisador para solucionar o problema em que se
+depara. -->
 
 O contexto da pesquisa contempla apenas usuários com nível superior
-incompleto ou completo, que tiveram contato com as normas da ABNT
+*incompleto* ou *completo*, que tiveram contato com as normas da ABNT
 durante sua formação. 
 
 ## Estrutura da Dissertação
@@ -75,8 +91,7 @@ desenvolvimento do trabalho;
 - Capítulo 5: Apresenta a proposta do experimento;
 - Capítulo 6: Cronograma de atividades para atingir os objetivos.
 
-
-# Fundamentação Teórica {#cap:fundamentacao}
+# Fundamentação Teórica
 
 A fundamentação teórica do trabalho consiste nas normas da ABNT,
 biblioteca para elaboração de textos com as normas da
@@ -155,6 +170,49 @@ que apresentam instruções conflitantes com as normas.
 > abaixo do título da figura, precedida dos seguintes itens \[...\]
 
 ## abnTeX2 ##
+
+
+
+<!-- A escolha de qual ambiente utilizar varia de acordo com gosto, a área
+do trabalho e afinidade do aluno (e do orientado) com as ferramentas. -->
+
+Em
+ambos sistemas são possíveis elaborar modelos de documentos com estilos
+de formatação, previamente configurados, para atender aos requisitos
+das Normas da ABNT para trabalhos acadêmicos. 
+
+As coordenações de
+cursos costumam disponibilizar para os alunos tais modelos.
+
+
+
+
+costuma utilizar o Word, mas uma parcela menor opta pelo Latex, que
+possui uma curva de aprendizado maior. As linguagens de marcações de
+texto, como o Markdown e similares, surgem como alternativas para
+simplificar a complexidade de formatação de textos.
+
+Essas linguagens de marcação de texto alegam serem mais
+ágeis\footnote{Comparado ao Latex.} para composição de textos, mas não
+encontramos na literatura estudos empíricos para suportar essa
+afirmação, especialmente para formatação com as normas da ABNT.
+
+O surgimento do pacote Abntex\footnote{http://www.abntex.net.br}
+auxiliou na popularização da utilização do Latex para trabalhos
+acadêmicos no Brasil, ao fornecer estilos e comandos em conformidades
+com as normas da ABNT, mas o equivalente ainda não aconteceu com as
+linguagens de marcação. Não encontramos iniciativas que foram capazes
+de escrever e formatar, com sucesso, monografias em Markdown no país.
+
+O *Design* simplista do Markdown impõe algumas
+limitações\footnote{Sintaxe original do Markdown
+  \href{https://daringfireball.net/projects/markdown/syntax}.}, uma
+delas é impossibilitar adicionar, simultaneamente, as legendas e
+fontes das Figuras ou Tabelas, exigência das normas da ABNT.
+
+
+
+
 
 O abnTeX2, evolução do abnTeX (*ABsurd Norms for TeX*), é
 uma iniciativa livre que apresenta um conjunto de pacotes para produção
@@ -384,88 +442,16 @@ O framework de dimensões cognitivas de notações (*Cognitive
 Dimensions of Notations framework*), foi desenvolvido para
 assistir designers de sistemas de notações e informações para avaliar o
 impacto que o design terá sobre os usuários desses sistemas
-\cite{@Blackwell2001}.
+\cite{Blackwell2001}.
 
-### Estudos empíricos
+O objetivo do *framework* é ele proporcionar discussões para que o
+Designer possa compreender as consequências cognitivas de suas
+decisões. O *framework* não tem o propósito de guiar o desenvolvimento
+de novas notações, e também não oferece critérios de *design* que
+devem ser seguidos \cite{green1996usability}.
 
-Os estudos sobre usabilidades de linguagens avançaram no área de
-Linguagens de Programação. Kaijanaho propõe uma metodologia de design de
-linguagens baseada em evidências, através da utilização de pesquisas
-secundárias e avaliação das análises. \cite{@kaijano15}
-
-Não temos conhecimento sobre estudos empíricos com linguagens de
-marcação de texto, mas alguns princípios de linguagem de programação
-podem ser utilizados.
-
-## Considerações Finais ##
-
-Na fundamentação teórica apresentamos as normas da ABNT, as regras para
-utilizar ilustrações e a biblioteca abnTeX2, que possibilita compor
-textos em com conformidade com as normas.
-
-Em seguida apresentamos duas linguagens de marcação de texto: Markdown e
-Asciidoc, com seu contexto de criação e suas limitações.
-
-A ferramenta Pandoc, que implementa a linguagem Markdown, utiliza-se de
-modelos Latex para geração de arquivos PDFs. Muitas configurações são
-inseridas pelo usuário através de arquivos ou blocos no formato YAML,
-que possui uma sintaxe bastante expressiva, mas um pouco complexa. A
-sintaxe de inserção de imagens e tabelas não permite incluir a notas
-explicativas ou informar a fonte da imagem.
-
-O formato de arquivo PDF, bastante utilizado para publicação de texto,
-também permite a inserção e extração de dados através do recurso de
-formulários.
-
-O sistema comercial ABNTFácil implementou uma linguagem de marcação
-especializada para o público nacional, em que mesclou conceitos das
-normas da ABNT com recursos do Word.
-
-O Design de uma linguagem necessita de reflexões cognitivas de como
-usuário irá interagir com ela através de um sistema. O ideal é que as
-decisões da criação da linguagem estejam associadas a estudos empíricos.
-
-# Trabalhos Relacionados {#cap:relacionados}
-
-## R Markdown ##
-
-A linguagem R Markdown, suportada pela ferramenta RStudio, apresenta uma
-variação da linguagem com o propósito de facilitar a 
-*reprodutibilidade* de pesquisas científicas.
-
-A *replicação* de uma pesquisa consiste em executar toda a
-análise estatística novamente, gerar gráficos ou tabelas e incorporá-los
-no documento final, no mesmo ambiente de trabalho. A
-*reprodução* da pesquisa consiste em outro pesquisador ser
-capaz de reproduzir os mesmos resultados em um ambiente de trabalho
-diferente.@gandrud2013reproducible
-
-O R Markdown é essencialmente Markdown, mas possibilita a inserção de
-blocos de instruções para realização de tratamentos estatísticos na
-linguagem R[^8], que são executadas numa nova etapa durante a compilação
-do documento. Os pesquisadores que desejam reproduzir a pesquisa podem
-inspecionar as instruções estatísticas e reproduzir os resultados com
-acesso aos mesmos dados (que geralmente residem em arquivos no formato
-somente texto, fora do documento).
-
-### Discussão
-
-A linguagem Makdown já foi extendida para contemplar
-
-O surgumento de R Markdown mostra que a linguagem Markdown já foi
-extendida para proporcionar produção de documentos acadêmicos
-*e* reprodutibilidade de pesquisa.
-
-A linguagem de marcação de texto Markdown não é expressiva o sufuciente
-para atender as exigências das normas da ABNT para elaboração de
-trabalhos acadêmicos.
-
-A utilização da ferramenta Pandoc para formatação de um trabalho
-acadêmico com as normas da ABNT requer a criação de um novo modelo (no
-formato Latex, com estilos apropriados) que possa ser configurado
-através das variáveis, especificadas nos blocos YAML pelo usuário final.
-
-## Avaliação de linguagem de programação utilizando o framework Cognitive Dimensions ##
+Nas seções seguintes são descritas as dimensões cognitivas apresentes
+no *framework*.
 
 Viscosity: resistance to change. A viscous system needs many user
 actions to accomplish one goal. Changing all headings to upper-case may
@@ -561,6 +547,119 @@ interpreted programming environments such as BASIC is that users can try
 out partially-completed versions of the product program, perhaps leaving
 type information or declarations incomplete.
 
+### Abstração ###
+
+
+
+
+### Estudos empíricos
+
+Os estudos sobre usabilidades de linguagens avançaram no área de
+Linguagens de Programação. Kaijanaho propõe uma metodologia de design de
+linguagens baseada em evidências, através da utilização de pesquisas
+secundárias e avaliação das análises. \cite{@kaijano15}
+
+Não temos conhecimento sobre estudos empíricos com linguagens de
+marcação de texto, mas alguns princípios de linguagem de programação
+podem ser utilizados.
+
+## Considerações Finais ##
+
+Na fundamentação teórica apresentamos as normas da ABNT, as regras para
+utilizar ilustrações e a biblioteca abnTeX2, que possibilita compor
+textos em com conformidade com as normas.
+
+Em seguida apresentamos duas linguagens de marcação de texto: Markdown e
+Asciidoc, com seu contexto de criação e suas limitações.
+
+A ferramenta Pandoc, que implementa a linguagem Markdown, utiliza-se de
+modelos Latex para geração de arquivos PDFs. Muitas configurações são
+inseridas pelo usuário através de arquivos ou blocos no formato YAML,
+que possui uma sintaxe bastante expressiva, mas um pouco complexa. A
+sintaxe de inserção de imagens e tabelas não permite incluir a notas
+explicativas ou informar a fonte da imagem.
+
+O formato de arquivo PDF, bastante utilizado para publicação de texto,
+também permite a inserção e extração de dados através do recurso de
+formulários.
+
+O sistema comercial ABNTFácil implementou uma linguagem de marcação
+especializada para o público nacional, em que mesclou conceitos das
+normas da ABNT com recursos do Word.
+
+O Design de uma linguagem necessita de reflexões cognitivas de como
+usuário irá interagir com ela através de um sistema. O ideal é que as
+decisões da criação da linguagem estejam associadas a estudos empíricos.
+
+# Trabalhos Relacionados
+
+## R Markdown: linguagem para reprodutibilidade de pesquisas científicas ##
+
+A linguagem R Markdown, suportada pela ferramenta RStudio, apresenta uma
+variação da linguagem Markdown com o propósito de facilitar a 
+*reprodutibilidade* de pesquisas científicas.
+
+A *replicação* de uma pesquisa consiste em executar toda a
+análise estatística novamente, gerar gráficos ou tabelas e incorporá-los
+no documento final, no mesmo ambiente de trabalho. A
+*reprodução* da pesquisa consiste em outro pesquisador ser
+capaz de reproduzir os mesmos resultados em um ambiente de trabalho
+diferente \cite{Gandrud2015}.
+
+O R Markdown é essencialmente Markdown, mas possibilita a inserção de
+blocos de instruções na linguagem R para realização de tratamentos
+estatísticos (geração de gráficos, tabelas, etc.), que são executadas
+em uma etapa anterior a compilação do documento.  Os pesquisadores que
+desejam reproduzir uma pesquisa podem inspecionar as instruções
+estatísticas e reproduzir os resultados, geralmente com acesso aos
+mesmos dados da pesquisa.
+
+## Análise de interfaces de softwares para composição de músicas e efeitos sonoros
+
+Uma análise de interfaces utilizando o Framework de Dimensões
+cognitivas foi realizada em \cite{Bellingham2014}. Nesse trabalho o
+álvo da pesquisa eram interfaces de softwares de composição musical,
+utilizando algoritmos parametrizados. O trabalho analisa diversas
+interfaces, que incluem linguagens de programação visual, linguagens
+de programação orientadas a textos, e softwares que solicitam dados do
+usuário.
+
+As análises das interfaces foram realizadas sem o envolvimento ativo
+de usuários (utiliza opinião de *expert*), com execução dos sistemas e
+em contextos não realísticos. A análise contemplou todas as 14
+dimensões do *framework* de Dimensões Cognitivas.
+
+### Discussão
+
+A linguagem Makdown já foi extendida para contemplar
+
+O surgumento de R Markdown mostra que a linguagem Markdown já foi
+extendida para proporcionar produção de documentos acadêmicos
+*e* reprodutibilidade de pesquisa.
+
+A linguagem de marcação de texto Markdown não é expressiva o sufuciente
+para atender as exigências das normas da ABNT para elaboração de
+trabalhos acadêmicos.
+
+A utilização da ferramenta Pandoc para formatação de um trabalho
+acadêmico com as normas da ABNT requer a criação de um novo modelo (no
+formato Latex, com estilos apropriados) que possa ser configurado
+através das variáveis, especificadas nos blocos YAML pelo usuário final.
+
+
+
+
+
+
+## Análise de usabilidade de ambientes de programação visual
+
+O *framework* de Dimensões Cognitivas foi utilizado para avaliar
+dois ambientes de programação visual em \cite{green1996usability}. 
+
+## Avaliação de linguagem de programação utilizando o framework de Dimensões Cognitivas ##
+
+
+
 ## Considerações Finais ##
 
 Nossa pesquisa busca criar uma nova linguagem para um contexto similar:
@@ -590,5 +689,87 @@ como monografias).
 [^7]: O software ABNTFÁCIL é comercializado através do site
     <http://abntfacil.com.br>.
 
-[^8]: Linguagem interpretada que possibilita a realização de cálculos e
-    gráficos estatísticos.
+# Proposta de dissertação #
+
+Conforme descrito na Seção 1.2, o objetivo deste trabalho é <span>
+*propor*</span> e <span>*validar a eficácia*</span> de uma linguagem de
+marcação de texto especializada para a produção de trabalhos acadêmicos
+em conformidades com as normas da ABNT.. Para alcançar este objetivo, os
+seguintes passos serão seguidos:
+
+-   Configuração de um modelo Latex parametrizado para utilização com a
+    ferramenta Pandoc para geração de monografias com a formatação
+    segundo as regras da ABNT.
+
+-   Experimento de substituição de arquivo de configuração YAML por
+    arquivo PDF com formulário.
+
+-   Design de uma linguagem baseada em Markdown para possibilitar
+    inclusão da Fonte das ilustrações, em conformidade com a ABNT.
+
+-   Realização do experimento com grupo de usuários utilizando Latex e
+    outro utilizando a linguagem criada.
+
+-   Adicionar funcionalidade à linguagem para possibilitar incluir uma
+    referência bibliográfica em qualquer lugar do documento.
+
+-   Realização de teste de usabilidade referente à
+    funcionalidade adicionada.
+
+# Proposta de Avaliação Experimental #
+
+## Proposta de Experimento ##
+
+Serão conduzidos três experimentos:
+
+-   Teste de eficácia da linguagem de marcação de texto.
+
+-   Teste de eficácia da utilização de arquivos PDFs com formulários em
+    substituição de arquivos de configuração no formato YAML.
+
+-   Teste de usabilidade da funcionalidade *permitir inserir
+    referencial teórico próximo da citação*.
+
+### Plano do Experimento
+
+Perguntas da pesquisa:
+
+-   Pergunta 1: A troca de utilização do ambiente Latex por um ambiente
+    com linguagem de marcação de texto (LMT) fará com que usuários
+    formatem uma monografia em menos tempo?
+
+-   Pergunta 2: A utilização de documentos PDF com formulários
+    possibilita usuários realizar configurações com menos tempo e erros
+    do que a configuração com arquivos no formato YAML?
+
+-   Pergunta 3: Em textos científicos em que as referências são
+    apresentadas no final do texto, os usuários gostarão da
+    funcionalidade de poder redigir o texto da entrada de uma referência
+    em qualquer lugar do documento?
+
+Para responder as perguntas 1 e 2 serão realizados experimentos <span>
+*t-test*</span> com no mínimo 40 participantes em cada grupo.
+
+Hipóteses nulas:
+
+-   HN1: A troca de utilização do ambiente Latex por um ambiente com
+    linguagem de marcação de texto (LMT) não apresentará diferenças
+    significativas em relação ao tempo de formatação de uma monografia.
+
+-   HN2: A utilização de documentos PDF com formulários usuários não
+    apresenta diferença significativa de tempo ou quantidade de erros em
+    relação à utilização de arquivos no formato YAML.
+
+A terceira pergunta será respondida através de análise qualitativa,
+apresentando o percentual de usuários que gostaram e buscando
+identificar o perfil deles.
+
+### Planejamento de Execução
+
+Os experimentos serão realizados com usuários de nível de instrução
+superior incompleto ou superior.
+
+
+# Conclusão e Cronograma #
+
+![image](images/cronograma.png){width="100.00000%"}
