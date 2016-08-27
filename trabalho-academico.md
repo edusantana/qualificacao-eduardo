@@ -130,44 +130,45 @@ pesquisa.
 
 ### Ilustrações
 
-Segundo a ABNT NBR 14724(:2011), ao inserir uma ilustração no texto,
+Segundo a ABNT NBR 14724:2011, ao inserir uma ilustração no texto,
 deveremos:
 
--   Obrigatoriamente, adicionar na parte superior (a) o tipo da
+-   Obrigatoriamente, adicionar na *parte superior* (a) o tipo da
     ilustração (Figura, Quadro, Tabela, etc.), (b) um travessão como
     separador, e (c) um título para a ilustração. (Regra de
     apresentação);
 
--   Obrigatoriamente adicionar na parte inferior, a fonte da imagem,
+-   Obrigatoriamente adicionar na *parte inferior*, a fonte da imagem,
     mesmo que seja do próprio autor. (Regra de apresentação);
 
 -   Opicionalmente notas explicativas e legendas também podem ser
-    adicionadas na parte inferior. (Regra de apresentação);
+    adicionadas na *parte inferior*. (Regra de apresentação);
 
 -   Obrigatoriamente, referenciar a ilustração no texto, o mais
     próximo possível. (Regra de utilização).
 
 ### Guias ou manuais conflitantes com as Normas da ABNT
 
-Provavelmente devido as normas da ABNT possuírem direitos autorais (e
-serem comercializadas), muitas instituições produzem guias próprios para
-auxiliarem os alunos na formatação dos trabalhos. Percebemos que os
-guias apresentam informações adicionais (tais como tamanho ou tipo da
-fonte de determinados elementos) que direcionam os alunos a uma
-implementação das normas, mas que não são exigências delas.
-
-Os alunos, sem conhecerem as normas, passam a confiar que os guias
+Muitos guias de formatação disponibilizados por instituições de ensino
+superior possuem erros. Provavelmente devido as normas da ABNT não
+serem distribuídas livremente, muitas instituições produzem guias
+próprios para auxiliarem os alunos na formatação dos
+trabalhos. Percebemos que os guias apresentam informações adicionais
+(tais como tamanho ou tipo da fonte de determinados elementos) que
+direcionam os alunos a uma implementação das normas, mas que não são
+exigências delas.
 
 Também é possível encontrar manuais tais como
-\cite{joelma_marques_da_silva_normas_2012} e \cite{conselheiro_lafaiete_manual_2016}
-que apresentam instruções conflitantes com as normas.
+\cite{joelma_marques_da_silva_normas_2012} e
+\cite{conselheiro_lafaiete_manual_2016} que apresentam instruções
+conflitantes com as normas, os grifos a seguir ilustram isso:
 
-> A identificação da figura deve estar localizada em sua parte inferior,
+> A identificação da figura deve estar localizada em sua *parte inferior*,
 > em letras maiúsculas, em tamanho 10, alinhada à margem lateral
 > esquerda do texto, contendo \[...\]
 >
 > A fonte de onde foram extraídas as informações deve ser colocada
-> abaixo do título da figura, precedida dos seguintes itens \[...\]
+> *abaixo do título da figura*, precedida dos seguintes itens \[...\]
 
 ## abnTeX2 ##
 
@@ -301,9 +302,9 @@ A permissividade auxilia o usuário, pois permite inserir valores
 *String* com o caracter “:”, será necessário inserir todo o
 valor entre aspas, como o valor da variável *abstract*.
 
-A *indentação* também é considerada, caso não houvesse os
-espaços antes da variável *affiliation* ela não estaria
-relacionada a  *author*.
+A *indentação* também é obrigatória para definir hierarquia. Na Figura
+\ref{fig:yaml}, a variável *affiliation* não estaria relacionada a
+*author* se não houvesse indentação.
 
 #### Inclusão de imagens no markdown (Pandoc)
 
@@ -383,26 +384,18 @@ Através formulários é possível solicitar ao usuário, através de uma
 interface amigável, informações que podem ser salvas e posteriormente
 acessadas.
 
-## ABNTFÁCIL ##
+## Estudos empíricos ##
 
-Existe um software nacional que implementa uma linguagem de marcação
-própria, concebida especialmente para elaborar e formatar os trabalhos
-acadêmicos em conformidade com as normas da ABNT.[^7]
+Os estudos sobre usabilidades de linguagens avançaram no área de
+Linguagens de Programação. Kaijanaho propõe uma metodologia de design de
+linguagens baseada em evidências, através da utilização de pesquisas
+secundárias e avaliação das análises. \cite{@kaijano15}
 
-O software mescla a utilização de uma linguagem de marcação com
-configurações inseridas através de formulários. O processo de compilação
-utiliza macros do MS-Word, que geram os documentos com a formatação
-configurada.
+Não temos conhecimento sobre estudos empíricos com linguagens de
+marcação de texto, mas alguns princípios de linguagem de programação
+podem ser utilizados.
 
-Todas as *tags* são em português; algumas inspiradas nas
-normas da ABNT: cap (Capítulo), QDR (Quadro), TAB (Tabela), sc01 (Seção
-de nível 1), sc02(Seção de nível 2), int (Introdução), NRP (Nota de
-rodapé), ctd (Citação direta). Outras foram inspiradas na nomenclatura
-que o MS-Word utilizada para os recursos: mci (marcadores de itens –
-lista não ordenada), mcl (marcadores com letras – lista ordenada com
-letras), mcn (marcador de número – lista ordenada por números).
-
-## Design de Liguagens para usabilidade ##
+## Design de Linguagens para usabilidade ##
 
 No estudo sobre a usabilidade de linguagens, as ferramentas de suporte à
 linguagem exercem influências. \cite{green1989} apresenta uma pesquisa em que
@@ -419,24 +412,8 @@ recomendações sobre o tema em \cite{pane1996}, \cite{green1989} e \cite{green1
 desginer deverá ponderar sobre diversos aspectos da linguagem, entre
 eles:
 
-**Dependências explícitas ou impícitas**: A configuração de estilos em
-cascata propaga as configurações do pais para os seus descendentes,
-gerando uma dependência. Alterações em estilos pais podem causar
-drásticas consequências no documento inteiro.
 
-**Viscosidade**: Relativo a quanto uma linguagem resiste a alterações
-locais. Por exemplo, em um texto com numeração de Figuras, a adição de
-uma nova Figura no início do texto pode necessitar várias alterações.
-
-**Compromisso prematuro**: O sistema pode proporcionar que o usuário
-realize ações de acordo com fluxo natural de instruções que a mente (do
-usuário) produz. O extremo contra exemplo seria a necessidade de
-informar o texto numa ordem específica, como no caso do sistema de
-reconhecimento de voz de Pascal apresentado anteriormente.
-
-Cognitive Dimensions of Notations framework
-
-## Dimensões cognitivas de notações ##
+## Framework de Dimensões Cognitivas de Notações ##
 
 O framework de dimensões cognitivas de notações (*Cognitive
 Dimensions of Notations framework*), foi desenvolvido para
@@ -444,14 +421,45 @@ assistir designers de sistemas de notações e informações para avaliar o
 impacto que o design terá sobre os usuários desses sistemas
 \cite{Blackwell2001}.
 
-O objetivo do *framework* é ele proporcionar discussões para que o
+O objetivo do *framework* é proporcionar discussões para que o
 Designer possa compreender as consequências cognitivas de suas
-decisões. O *framework* não tem o propósito de guiar o desenvolvimento
-de novas notações, e também não oferece critérios de *design* que
-devem ser seguidos \cite{green1996usability}.
+decisões. Ele descreve a usabilidade de sistemas ou artefatos
+informacionais. O *framework* não tem o propósito de guiar o
+desenvolvimento de novas notações, e também não oferece critérios de
+*design* que devem ser seguidos \cite{green1996usability}.
 
 Nas seções seguintes são descritas as dimensões cognitivas apresentes
-no *framework*.
+no *framework* \cite{Blackwell2001}.
+
+### Viscosidade ###
+
+<!--
+- When you need to make changes to previous work, how easy is it to make the change? Why?
+Quando você precisa realizar alterações em trabalhos anteriores, quão fácil é realizar a alteração? Por que?
+
+- Are there particular changes that are more difficult or especially difficult to make? Which ones?
+Existem mudanças específicas que são mais difíceis/trabalhosas de serem realizadas? Quais são elas? 
+
+-->
+
+A visocidade (*Viscosity*) está relacionada a resistência a
+mudanças. Um sistema com alto nível de viscosidade precisa de várias
+ações do usuário para atingir um objetivo. É possível distinguir
+*viscosidade de repetição* de *viscosidade knock-up*.
+
+Um exemplo de viscosidade de repetição ocorre na manutenção de um
+Sumário com numeração de páginas das seções manualmente. A adição ou
+remoção de parágrafos pode gerar a necessidade de atualizar todas as
+referências de páginas do Sumário, as atualizações são todas do mesmo
+tipo: alterar o número da página.
+
+Um exemplo de viscosidade *knock-up* poderia ser a exclusão de um
+personagem de um livro. Essa atividade requer que várias ações sejam
+realizadsa para manter a consistência do livro (como se o personagem
+nunca houvesse existido): bantante diálogos e situações do texto devem
+ser revistas, repensadas e reescritas.
+
+<!--
 
 Viscosity: resistance to change. A viscous system needs many user
 actions to accomplish one goal. Changing all headings to upper-case may
@@ -459,19 +467,52 @@ need one action per heading. (Environments containing suitable
 abstractions can reduce viscosity.) We distinguish repetition viscosity,
 many actions of the same type, from knock-on viscosity, where further
 actions are required to restore consistency.
+-->
 
-Visibility: ability to view components easily. Systems that bury
+### Visibilidade  ###
+
+<!--
+
+ ability to view components easily. Systems that bury
 information in encapsulations reduce visibility. Since examples are
-important for problem- solving, such systems are to be deprecated for
+important for problem-solving, such systems are to be deprecated for
 exploratory activities; likewise, if consistency of transcription is to
 be maintained, high visibility may be needed.
+-->
 
-Premature commitment: constraints on the order of doing things.
+A Visibilidade (*Visibility*) é a habilidade de ver componentes
+facilmente. O encapsulamento de informações reduz a visibilidade
+\cite{green1989}.
+
+
+### Compromisso Prematuro ###
+
+<!--
+: constraints on the order of doing things.
 Self-explanatory. Examples: being forced to declare identifiers too
 soon; choosing a search path down a decision tree; having to select your
 cutlery before you choose your food.
+-->
 
-Hidden dependencies: important links between entities are not visible.
+<!--
+**Compromisso prematuro**: O sistema pode proporcionar que o usuário
+realize ações de acordo com fluxo natural de instruções que a mente (do
+usuário) produz. O extremo contra exemplo seria a necessidade de
+informar o texto numa ordem específica, como no caso do sistema de
+reconhecimento de voz de Pascal apresentado anteriormente.
+-->
+
+O compromisso prematuro (*Premature commitment*) consiste em impor
+restrições na ordem de realizar as ações. O sistema pode proporcionar
+que o usuário realize ações de acordo com fluxo natural de instruções
+que a mente (do usuário) produz ou impor que ele tenha que configurar
+vários detalhes antes de utilizar o sistema \cite{green1989}. 
+
+### Dependências ocultas ###
+
+<!--
+
+important links between entities are not visible.
 
 If one entity cites another entity, which in turn cites a third,
 changing the value of the third entity may have unexpected
@@ -480,8 +521,20 @@ Word; complex class hierarchies; HTML links. There are sometimes actions
 that cause dependencies to get frozen – e.g. soft figure numbering can
 be frozen when changing platforms; these interactions with changes over
 time are still problematic in the framework.
+-->
 
-Role-expressiveness: the purpose of an entity is readily inferred.
+As Dependências ocultas (*Hidden dependencies*) consistem em propagar
+as alterações para outras entidades.  A configuração de estilos em
+cascata (CSS) propaga as configurações do pais para os seus
+descendentes, gerando uma dependência. Alterações em estilos pais
+podem causar drásticas consequências no documento inteiro
+\cite{green1989}.
+
+### Expressividade de papeis ###
+
+<!--
+
+: the purpose of an entity is readily inferred.
 Role-expressive notations make it easy to discover why the programmer or
 composer has built the structure in a particular way; in other notations
 each entity looks much the same and discovering their relationships is
@@ -490,13 +543,37 @@ conjecture about cognitive representations (see the Prolog analysis
 below) but does not require the analyst to develop his/her own cognitive
 model or analysis.
 
-Error-proneness: the notation invites mistakes and the system gives
+-->
+
+Expressividade de papeis (*Role-expressiveness*) consiste em como as
+entidades são facilmente inferidas ao observá-las \cite{green1989}.
+
+<!-- Expressivos: listas e tabelas Itálico: // Sublinhado: __ ----  -->
+
+### Tendência a erros ###
+
+<!--
+
+: the notation invites mistakes and the system gives
 little protection. Enough is known about the cognitive psychology of
 slips and errors to predict that certain notations will invite them.
 Prevention (e.g. check digits, declarations of identifiers, etc) can
 redeem the problem.
 
-Abstraction: types and availability of abstraction mechanisms.
+-->
+
+A Tendência a erros (*Error-proneness*) é quanto a notação facilita o
+usuário a errar \cite{blackwell2003notational}. *Generics* em Java é
+um recurso para diminuir os erros de execução. O usuário especifica
+qual o tipo esperado da coleção, e caso haja uma tentativa de
+adicionar um objeto de outro tipo haverá um erro de compilação.
+
+
+### Abstração ###
+
+<!--
+
+: types and availability of abstraction mechanisms.
 Abstractions (redefinitions) change the underlying notation. Macros,
 data structures, global find-and-replace commands, quick-dial telephone
 codes, and word-processor styles are all abstractions. Some are
@@ -506,39 +583,101 @@ sub-device. It will sometimes have its own notation and environment
 (e.g. the Word style sheet manager) but not always (for example, a class
 hierarchy can be built in a conventional text editor). Systems that
 allow many abstractions are potentially difficult to learn.
+-->
 
-Secondary notation: extra information in means other than formal syntax.
+Abstrações (*Abstraction*) são tipos ou disponibilidade de mecanismos
+de abstrações \cite{blackwell2003notational}. Exemplos de abstrações
+são controles de *playback* (interface para controlar a execução de
+mídias), modelos de documentos e utilização de ícones que trazem
+significados \cite{Bellingham2014}.
+
+### Notação secundária ###
+
+<!-- 
+: extra information in means other than formal syntax.
 Users often need to record things that have not been anticipated by the
 notation designer. Rather than anticipating every possible user
 requirement, many systems support secondary notations that can be used
 however the user likes. One example is comments in a programming
 language, another is the use of colours or format choices to indicate
 information additional to the content of text.
+-->
 
-Closeness of mapping: closeness of representation to domain. How closely
+Notação secundária (*Secondary notation*) consiste em informações
+extras apresentadas ao usuário com sintaxe diferente da formal. Cores,
+fontes e comentários fazem parte dessa
+categoria \cite{Bellingham2014}.
+
+### Proximidade do mapeamento  ###
+
+<!--
+: closeness of representation to domain. How closely
 related is the notation to the result it is describing?
+-->
 
-Consistency: similar semantics are expressed in similar syntactic forms.
+Proximidade do mapeamento (*Closeness of mapping*) refere-se a uma
+correlação entre a interface e a tarefa sendo realizada ou seu
+resultado experado \cite{Bellingham2014}\cite{Blackwell2001}.
+
+### Consistência ###
+
+<!--
+: similar semantics are expressed in similar syntactic forms.
 Users often infer the structure of information artefacts from patterns
 in notation. If similar information is obscured by presenting it in
 different ways, usability is compromised.
+-->
 
-Diffuseness: verbosity of language. Some notations can be annoyingly
+A Consistência (*Consistency*) referê-se a como informações similares
+possuem semântica semelhante \cite{Blackwell2001}. Um sistema que
+possui alto nível de consistência é mais fácil de ser apreendido.
+
+
+### Prolixidade ###
+
+<!--
+: verbosity of language. Some notations can be annoyingly
 long-winded, or occupy too much valuable “real-estate” within a display
 area. Big icons and long words reduce the available working area.
+-->
 
-Hard mental operations: high demand on cognitive resources. A notation
+Prolixidade (*Diffuseness*) refere-se a verbosidade da linguagem. A
+notação permite que o usuário realize o que deseja de forma breve ou
+requer tediosas intervenções? Algumas notações necessitam mais espaço
+para serem descritas?
+
+### Processos mentais potencialmente explosivos ###
+
+<!--
+: high demand on cognitive resources. A notation
 can make things complex or difficult to work out in your head, by making
 inordinate demands on working memory, or requiring deeply nested goal
 structures.
+-->
 
-Provisionality: degree of commitment to actions or marks. Premature
+Processos mentais potencialmente explosivos (*Hard mental operations*)
+refere-se a notações que exigem uma sobrecarga de processamento
+cognitivo \cite{green2006cognitive}.  Um exemplo clássico é a
+utilização de ponteiros em C.
+
+
+### Provisionamento ###
+
+<!-- degree of commitment to actions or marks. Premature
 commitment refers to hard constraints on the order of doing things, but
 whether ot not hard constraints exist, it can be useful to make
 provisional actions – recording potential design options, sketching, or
 playing “what-if” games.
+-->
 
-Progressive evaluation: work-to-date can be checked at any time.
+O Provisionamento (*Provisionality*) refere-se ao grau de liberdade
+para testar ou explorar novas ideias. É possível planejar novas coisas
+sem necessitar informar detalhes do resultado esperado?
+
+### Avaliação progressiva ###
+
+<!--
+work-to-date can be checked at any time.
 Evaluation is an important part of the design process, and notational
 systems can facilitate evaluation by allowing users to stop in the
 middle to check work so far, find out how much progress has been made,
@@ -546,22 +685,41 @@ or check what stage in the work they are up to. A major advantage of
 interpreted programming environments such as BASIC is that users can try
 out partially-completed versions of the product program, perhaps leaving
 type information or declarations incomplete.
+-->
 
-### Abstração ###
+A Avaliação progressiva (*Progressive evaluation*) refere-se a
+habilidade de checar o resultado a qualquer dado momento
+\cite{Blackwell2001}.
 
+## ABNTFÁCIL ##
 
+A elaboração de uma linguagem para produção de trabalhos acadêmicos
+com as normas da ABNT não algo inédito, existe um software nacional
+que implementa uma linguagem de marcação própria, concebida
+especialmente para elaborar e formatar os trabalhos acadêmicos em
+conformidade com as normas da ABNT.[^7]
 
+O software mescla a utilização de uma linguagem de marcação com
+configurações inseridas através de formulários. O processo de compilação
+utiliza macros do MS-Word, que geram os documentos com a formatação
+configurada.
 
-### Estudos empíricos
+\begin{figure}[htb]
+\caption{\label{fig_abntfacil}Texto e tags no ABNTFÁCIL}
+\begin{center}
+\includegraphics{imagens/abntfacil.png}
+\end{center}
+\legend{Fonte: https://youtu.be/o7SkBRTGJF4}
+\end{figure}
 
-Os estudos sobre usabilidades de linguagens avançaram no área de
-Linguagens de Programação. Kaijanaho propõe uma metodologia de design de
-linguagens baseada em evidências, através da utilização de pesquisas
-secundárias e avaliação das análises. \cite{@kaijano15}
-
-Não temos conhecimento sobre estudos empíricos com linguagens de
-marcação de texto, mas alguns princípios de linguagem de programação
-podem ser utilizados.
+Todas as *tags* são em português; algumas inspiradas nas normas da
+ABNT: **cap** (Capítulo), **QDR** (Quadro), **TAB** (Tabela), **sc01**
+(Seção de nível 1), **sc02** (Seção de nível 2), **int** (Introdução),
+**NRP** (Nota de rodapé), **ctd** (Citação direta) e **img**
+(Imagem). Outras foram inspiradas na nomenclatura que o MS-Word
+utilizada para os recursos: mci (marcadores de itens – lista não
+ordenada), mcl (marcadores com letras – lista ordenada com letras),
+mcn (marcador de número – lista ordenada por números).
 
 ## Considerações Finais ##
 
@@ -675,8 +833,7 @@ como monografias).
     Org mode, DocBook, txt2tags, EPUB, ODT e Word docx. Além desses
     formatos, a ferramenta também permite outros formatos de saída.
 
-[^3]: Por exemplo, atualmente existem quatro opções de sintaxe para
-    Tabelas
+[^3]: Atualmente existem quatro opções de sintaxe para Tabelas.
 
 [^4]: Geralmente incluídas no início do documento
 
@@ -685,9 +842,6 @@ como monografias).
 
 [^6]: Formato XML, criado pela editora O’Reilly Media para editoração de
     livros: <http://www.docbook.org>.
-
-[^7]: O software ABNTFÁCIL é comercializado através do site
-    <http://abntfacil.com.br>.
 
 # Proposta de dissertação #
 
@@ -768,6 +922,19 @@ identificar o perfil deles.
 
 Os experimentos serão realizados com usuários de nível de instrução
 superior incompleto ou superior.
+
+#### Utilização do Questionário ####
+
+<!-- solução caso não queira traduzi-lo:
+Os questionários serão aplicados através de entrevista.
+-->
+
+#### Apresentação dos resultados
+
+Os dados dos questionários serão apresentados de forma tabular,
+similar aos resultados do artigo do Questionário original
+\cite{CDquestionario}.
+
 
 
 # Conclusão e Cronograma #

@@ -1,5 +1,10 @@
 # O que você está fazendo? Para atingir qual propósito?
 
+## Sex Ago 26 15:44:51 BRT 2016
+
+Atualizando as dimensões. Para concluir a proposta.
+
+
 ## Qua Ago 24 13:38:24 BRT 2016
 
 - Lendo o primeiro artigo de utilização do framework. Para utilizar como trabalho relacionado.
