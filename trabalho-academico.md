@@ -6,15 +6,15 @@ dos estudos. Uma parte desse sofrimento está associada à formatação da
 monografia (no software de editoração) em conformidade com as normas
 da Associação Brasileira de Normas Técnicas (ABNT). 
 
-O público nacional atualmente possui notadamente duas alternativas
+O público nacional atualmente possui, de modo geral, duas alternativas
 para formatação de trabalhos acadêmicos: (1) Utilização de um editor
 de texto rico (como o Microsoft Word ou Libre Office) ou (2)
 Utilização do Latex. Embora o Latex possua uma *curva de aprendizado
 maior*, a produção de trabalhos acadêmicos com um editor de texto rico
 exige conhecimentos avançados da ferramenta (tais como utilização de
-estilos, geração de sumário e gerência de referências) ou esforço de
-edição muito grande para formatações manuais de todas as seções do
-trabalho.
+estilos, geração de sumário e gerência de referências), ou caso o
+usuário não domine essas técnicas terá um esforço de edição muito
+grande para formatações manuais de todas as seções do trabalho.
 
 As linguagens de marcação de texto (*lightweight markup language*)
 surgiram, em diferentes contextos, como alternativas para elaboração e
@@ -22,14 +22,13 @@ formatação de textos. Essas linguagens possibilitam os usuários
 redigirem em arquivos somente texto (*plain text*), com uma curva de
 aprendizado menor do que o Latex.
 
-
 ## Motivação
 
 A motivação desse trabalho consiste em ofertar uma nova alternativa
 para elaboração de trabalhos acadêmicos (monografia, dissertação ou
 tese) utilizando uma linguagem de marcação de texto, elaborada com o
-propósito de facilitar os alunos a redigirem e formatarem seus
-trabalhos em conformidade com as Normas da ABNT.
+propósito de redigirem e formatarem seus trabalhos em conformidade com
+as Normas da ABNT.
 
 ## Objetivos
 
@@ -41,12 +40,12 @@ trabalhos acadêmicos em conformidades com as normas da ABNT.
 
 ### Objetivos Específicos
 
-- Avaliar a utilização de uma linguagem de marcação de texto na
-  produção de monografias;
+- Implementar um sistema com utilização de uma linguagem de marcação
+  de texto na produção de monografias;
   
-- Avaliar a utilização de formulários PDF para edição
-  e configuração de conteúdos específicos dos trabalhos acadêmicos.
-
+- Avaliar a usabilidade da linguagem através de experimentos de
+  elaboração de trabalhos acadêmicos em contextos realístico e não
+  realístico.
 
 ## Método
 
@@ -64,11 +63,15 @@ Ver: Chapter 4
 Ann Blandford and Thomas Green
 Methodological Development -->
 
-Essa pesquisa utilizará uma avaliação *com* envolvimento ativo dos
-usuários, *com* sistema em execução e *sem* um contexto realístico. O
-método de avaliação empregado, utilizando o *Cognitive Dimensions of
-Notations framework*, está descrito no Capítulo 5, junto com a
-descrição do experimento.
+Essa pesquisa utilizará avaliação *com* envolvimento ativo dos
+usuários e *com* sistema em execução. Serão realizados experimentos
+*com* e *sem* um contexto realístico. Os experimentos estão descritos
+no Capítulo \ref{experimentos}.
+
+O método de avaliação da usabilidade empregado será o mesmo de
+\cite{green1996usability} do trabalho relacionado (Seção
+\ref{referenciadeavaliacao}) que utiliza o *framework* de Dimensões
+Cognitivas (descrito mais adiante na Seção \ref{frameworkcd}).
 
 <!-- Essa pesquisa utiliza filosofia Pragmática
 \cite[easterbrook2008selecting], ao escolher o método de pesquisa que
@@ -93,14 +96,33 @@ desenvolvimento do trabalho;
 
 # Fundamentação Teórica
 
-A fundamentação teórica do trabalho consiste nas normas da ABNT,
-biblioteca para elaboração de textos com as normas da
+A fundamentação teórica do trabalho apresenta as Normas da ABNT,
+e alguns dos seus requisitos.
 
-Nesse capítulo são apresentadas as Normas da ABNT, os problemas
-decorrentes do documento não ser público e como as ilustrações devem
-ser apresentadas segundo as Normas da ABNT.
+Em seguida apresentamos o projeto abnTeX que implementa os requisitos
+das Normas da ABNT e auxiliou a popularizar o uso do Latex na
+comunidade acadêmica nacional.
 
-O abTeX2 
+Em seguida são apresentadas duas linguagens de marcação de texto
+Markdown e Asciidoc. A primeira, mais limitada, surgiu para edição de
+mensagens para Internet, enquanto a outra surgiu com o propósito de
+elaboração de livros técnicos. Ambas as linguagens não apresentam
+sintaxe que possibilitam a implementação dos requisitos das Normas da
+ABNT. 
+
+A ferramenta ABNTFÁCIL que implementa uma linguagem de marcação de
+texto nacional (e comercial) voltada para produção de trabalhos
+acadêmicos também é apresentada.
+
+Os formulários em PDFs são apresentados como alternativas para
+aquisição de dados do usuário.
+
+Argumentos de que uma linguagem não pode ser avaliada independente do
+seu ambiente são apresentados (sistema = notação + ambiente).
+
+Por fim o *framework* de Dimensões Cognitivas de Notações é
+apresentado com a descrição de suas dimensões e como ele pode ser
+utilizado para avaliar a usabilidade um sistema.
 
 ## Normas da ABNT para trabalhos acadêmicos ##
 
@@ -180,7 +202,7 @@ conflitantes com as normas, os grifos a seguir ilustram isso:
 > A fonte de onde foram extraídas as informações deve ser colocada
 > *abaixo do título da figura*, precedida dos seguintes itens \[...\]
 	
-## abnTeX2 ##
+## abnTeX2 #
 
 O abnTeX (*ABsurd Norms for TeX*) é uma iniciativa da comunidade da
 comunidade de software livre que teve início em 2001 para produção de
@@ -188,8 +210,7 @@ documentos Latex em conformidade com as Normas da ABNT. A versão
 atual, abnTeX2, foi oficialmente lançada em 2012
 \cite{abntex2manual}. Ele oferece modelos de documentos (artigo,
 trabalho acadêmico, relatório técnico e projeto de pesquisa), manuais
-e um conjunto de comandos para realizar a conformidade com as Normas
-da ABNT.
+e um conjunto de comandos para contemplar as Normas da ABNT.
 
 O surgimento do projeto abnTeX constribuiu na popularização da
 utilização do Latex para trabalhos acadêmicos no Brasil. Algumas
@@ -417,6 +438,9 @@ técnicos no formato DocBook.[^6] Em vez de escrever o livro em XML, o
 autor poderia utilizar a sintaxe do Asciidoc e exportar um arquivo em
 conformidade com o padrão DocBook \cite{asciidoc}.
 
+[^6]: Formato XML, criado pela editora O’Reilly Media para editoração de
+    livros técnicos: <http://www.docbook.org>.
+
 A Asciidoc possui sintaxe para criar vários elementos de um livro
 compatível com o padrão Docbook (aceita inclusive a inserção de código
 DocBook puro). Ela suporta modularização através da inclusão de
@@ -576,7 +600,7 @@ eles:
 
 -->
 
-## Framework de Dimensões Cognitivas de Notações ##
+## Framework de Dimensões Cognitivas de Notações {#frameworkcd}
 
 Essa seção apresenta um *framework* para descrever a usabilidade de
 um sistema.
@@ -873,7 +897,8 @@ A Avaliação progressiva (*Progressive evaluation*) refere-se a
 habilidade de checar o resultado a qualquer dado momento
 \cite{Blackwell2001}.
 
-## Metodologia de desenvolvimento de linguagens baseadas em Estudos Empíricos ##
+<!--
+Metodologia de desenvolvimento de linguagens baseadas em Estudos Empíricos
 
 Os estudos sobre usabilidades de linguagens avançaram no área de
 Linguagens de Programação. \citeonline{kaijanaho2015evidence} propõe
@@ -885,6 +910,8 @@ Embora seja boa a ideia de implementar um *design* baseado em
 pesquisas que apresentem as consequências de utilização de certas
 notações, não temos conhecimento sobre estudos empíricos primários
 sobre o *design* de *linguagens de marcação de texto*.
+
+-->
 
 ## Considerações Finais ##
 
@@ -918,9 +945,22 @@ usuário irá interagir com ela através de um sistema. O ideal é que as
 decisões da criação da linguagem estejam associadas a estudos
 empíricos.
 
-# Trabalhos Relacionados
+# Trabalhos relacionados
 
-## R Markdown: linguagem para reprodutibilidade de pesquisas científicas ##
+Nessa seção são apresentados os trabalhos relacionados da pesquisa.
+
+O R Markdown é apresentado como um exemplo de personalização da
+linguagem Markdown para possibilitar a reprodutibilidade de pesquisas
+científicas.
+
+Os demais trabalhos apresentam análises de usabilidade que foram
+empregadas utilizando o *framework* de Dimensões Cognitivas.
+
+O último trabalho relacionado apresenta um Questionário para avaliação
+de sistemas através de experiências de usuários que não conhecem o
+*framework.*
+
+## R Markdown: linguagem para reprodutibilidade de pesquisas científicas
 
 A linguagem R Markdown, suportada pela ferramenta RStudio, apresenta uma
 variação da linguagem Markdown com o propósito de facilitar a 
@@ -972,27 +1012,32 @@ de usuários (utiliza opinião de um *expert*), com execução dos sistemas e
 em contextos não realísticos. A análise contemplou todas as dimensões
 do *framework* de Dimensões Cognitivas.
 
-## Análise de usabilidade de ambientes de programação visual
+## Análise de usabilidade de ambientes de programação visual {#referenciadeavaliacao}
 
 O *framework* de Dimensões Cognitivas também foi utilizado para
-avaliar dois ambientes de programação visual 
-\cite{green1996usability}.
+avaliar dois ambientes de programação visual
+\cite{green1996usability}. Esse trabalho apresenta uma avaliação
+bastante detalhada com todas as dimensões do *framework*.
 
-## Considerações Finais ##
+## Avaliação da usabilidade através de usuários que não conhecem o *framework*
 
-Nossa pesquisa busca criar uma nova linguagem para um contexto similar:
-produção de textos acadêmicos nacionais (trabalhos de final de curso
-como monografias).
+O *framework* de Dimensões Cognitivas foi elaborado para ser utilizado
+por alguém que conheça bem o *framework* e também conheça bem o
+sistema \cite{CDquestionario}.
 
-[^6]: Formato XML, criado pela editora O’Reilly Media para editoração de
-    livros técnicos: <http://www.docbook.org>.
+\citeonline{CDquestionario} elaborou um questionário para ser
+empregado em usuários sem conhecimento do *framework*, ele encontra-se
+disponível no Anexo \ref{anexoquestionario}. O questionário foi
+utilizado com 18 usuários na análise de 13 sistemas.
 
 # Proposta de dissertação #
 
-O objetivo deste trabalho é *propor* e *avaliar* a usabilidade de uma
-linguagem de marcação de texto especializada para a produção de
-trabalhos acadêmicos em conformidades com as normas da ABNT. Para
-alcançar este objetivo, os seguintes passos serão seguidos:
+A motivação dessa pesquisa é ofertar uma linguagem especializada para
+produção de trabalhos acadêmicos em conformidade com as Normas da
+ABNT.  O objetivo dessa pesquisa é *propor* e *avaliar* a usabilidade
+de um sistema que implementa essa linguagem.
+
+Para alcançar este objetivo, os seguintes passos serão seguidos:
 
 -   Elaboração da ferramenta Limarka para implementar a linguagem;
 
@@ -1001,79 +1046,115 @@ alcançar este objetivo, os seguintes passos serão seguidos:
     acadêmicos (monografias, dissertação e tese) com a formatação
     segundo as regras da ABNT;
 
--   Elaboração de formulário PDF para obter configurações do usuário;
+-   Elaboração e utilização de formulário PDF para obter configurações
+    do usuário;
 
 -   Avaliação de usabilidade utilizando o *framework* de Dimensões
     Cognitivas baseada na utilização de um caso real (escrita dessa
-    dissertação).
+    dissertação) e experimentos com aplicação do questionário com
+    contextos não realísticos.
 
-# Proposta de Avaliação Experimental #
+<!-- conferência para submissão: https://www.computer.org/web/tlt/author -->
 
-## Proposta de Experimento ##
+## Status de implementação ##
 
-Serão conduzidos três experimentos:
+A ferramenta Limarka foi produzida na linguagem Ruby, utilizando
+testes comportamentais automatizados (Apêndice \ref{apendice:testes}).
 
--   Teste de eficácia da linguagem de marcação de texto.
+Atualmente a ferramenta está parcialmente implementada, mas
+utilizável, encontra-se disponível em
+\url{https://github.com/abntex/limarka}. Ainda requer a implementação
+de alguns recursos para melhorar a usabilidade e algumas correções
+devido a decisões de projeto que não demonstraram ser positivas
+(personalização do modelo disponibilizado pelo Pandoc).
 
--   Teste de eficácia da utilização de arquivos PDFs com formulários em
-    substituição de arquivos de configuração no formato YAML.
+O formulário PDF também encontra-se funcional, no Apêndice
+\ref{apendice:formulariopdf} encontra-se o formulário utilizado na
+geração deste documento.
 
--   Teste de usabilidade da funcionalidade *permitir inserir
-    referencial teórico próximo da citação*.
+Uma das dependências do projeto, o *pdf-forms*, possui uma limitação:
+não permite ler campos com múltiplas linhas de um formulário PDF. Em
+13 de Julho submeti uma correção no projeto
+(\url{https://github.com/jkraemer/pdf-forms/pull/51}) mas ainda não
+foi aceita pelo mantenedor do projeto, mesmo que com testes de
+compatibilidade implementados sem apresentarem erros.
 
-### Plano do Experimento
+A solução temporária foi a geração de uma versão local com a
+atualização, e publicação dessa versão junto com a distribuição da
+ferramenta na sua primeira versão.
 
-Perguntas da pesquisa:
+# Proposta de Avaliação Experimental {#experimentos}
 
--   Pergunta 1: A troca de utilização do ambiente Latex por um ambiente
-    com linguagem de marcação de texto (LMT) fará com que usuários
-    formatem uma monografia em menos tempo?
+O *framework* de Dimensões Cognitivas foi elaborado para ser utilizado
+por alguém que conheça bem o *framework* e também conheça bem o
+sistema \cite{CDquestionario}.
 
--   Pergunta 2: A utilização de documentos PDF com formulários
-    possibilita usuários realizar configurações com menos tempo e erros
-    do que a configuração com arquivos no formato YAML?
+Por esse razão um experimento será realizado pelo autor desse
+trabalho, em contexto realístico, na elaboração de sua dissertação.
 
--   Pergunta 3: Em textos científicos em que as referências são
-    apresentadas no final do texto, os usuários gostarão da
-    funcionalidade de poder redigir o texto da entrada de uma referência
-    em qualquer lugar do documento?
+O questionário elaborado em \cite{CDquestionario} e disponibilizado no
+Anexo \ref{anexoquestionario} tem o propósito de possibilitar uma
+avaliação através do *feedback* de usuários que não conhecem o
+*framework*.
 
-Para responder as perguntas 1 e 2 serão realizados experimentos <span>
-*t-test*</span> com no mínimo 40 participantes em cada grupo.
+Esse questionário será utilizado em outros dois experimentos, um
+controlado e não realístico e outro não controlado (através da convite
+de utilização através da Internet).
 
-Hipóteses nulas:
+## Experimento com contexto realístico
 
--   HN1: A troca de utilização do ambiente Latex por um ambiente com
-    linguagem de marcação de texto (LMT) não apresentará diferenças
-    significativas em relação ao tempo de formatação de uma monografia.
+O autor desse trabalho irá utilizar o próprio sistema em
+desenvolvimento para a escrita de sua dissertação.
 
--   HN2: A utilização de documentos PDF com formulários usuários não
-    apresenta diferença significativa de tempo ou quantidade de erros em
-    relação à utilização de arquivos no formato YAML.
+Durante a implementação da ferramenta e a experiência com a utilização
+do sistema serão registrados informações referente a todas as
+dimensões cognitivas do *framework*, que irão compor a análise de
+usabilidade do sistema.
 
-A terceira pergunta será respondida através de análise qualitativa,
-apresentando o percentual de usuários que gostaram e buscando
-identificar o perfil deles.
+## Experimento controlado e sem contexto realístico
 
-### Planejamento de Execução
+Os usuários receberão uma capacitação e serão solicitados a realizarem
+diversas ações relacionadas a elaboração de uma monografia durante um
+determinado tempo.
 
-Os experimentos serão realizados com usuários de nível de instrução
-superior incompleto ou superior.
+Em seguida o questionário será preenchido através de entrevistas, com
+os *feedbacks* dos usuários.
 
-#### Utilização do Questionário ####
+## Experimento não controlado com usuários da internet
 
-<!-- solução caso não queira traduzi-lo:
-Os questionários serão aplicados através de entrevista.
--->
+Com a publicação de uma *release* oficial da ferramenta, usuários
+serão convidados através de redes sociais para experimentação da
+ferramenta e realização de *feedbacks* através do preenchimento do
+mesmo formulário do experimento anterior.
 
-#### Apresentação dos resultados
+# Cronograma #
 
-Os dados dos questionários serão apresentados de forma tabular,
-similar aos resultados do artigo do Questionário original
-\cite{CDquestionario}.
+\begin{table}[htb]
+\IBGEtab{%
+  \caption{Cronograma da pesquisa}%
+  \label{tabela-ibge}
+}{%
+  \begin{tabular}{ccccc}
+  \toprule
+   Etapa & Set & Out & Nov & Dez \\
+  \midrule \midrule
+   Conclusão da implementação da ferramenta & X \\
+  \midrule 
+	Publicação da Ferramenta e convite para experimentos on-line &  & X \\
+  \midrule 
+	Condução de experimentos controlados &  & X \\
+  \midrule 
+	Análise dos resultados dos experimentos &  & X & X \\
+  \midrule 
+	Escrita da dissertação & X & X & X \\
+  \midrule 
+	Experimento realístico & X & X  \\
+  \midrule 
+	Defesa da dissertação &  &  & X \\
 
-
-
-# Conclusão e Cronograma #
-
-![image](images/cronograma.png){width="100.00000%"}
+\bottomrule
+\end{tabular}%
+}{%
+  \fonte{Autor}%
+  }
+\end{table}
