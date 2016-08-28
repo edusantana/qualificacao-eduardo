@@ -498,7 +498,7 @@ ordenada por números).
 \begin{figure}[htbp]
 \caption{\label{fig:abntfacil:tags}Tags com abertura e fechamento do ABNTFÁCIL}
 \begin{center}
-\includegraphics{imagens/abntfacil-tags-com-fechamento.png}
+\includegraphics[width=0.85000\textwidth]{imagens/abntfacil-tags-com-fechamento.png}
 \end{center}
 \legend{Fonte: \citeonline{abntfacil}}.
 \end{figure}
@@ -1158,3 +1158,6 @@ mesmo formulário do experimento anterior.
   \fonte{Autor}%
   }
 \end{table}
+
+<!-- pdftk A=xxx-Monografia.pdf B=configuracao.pdf cat A1-47 B A68-END output proposta-qualificacao-eduardo.pdf
+-->
