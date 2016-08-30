@@ -285,8 +285,13 @@ A arquitetura da ferramenta Pandoc permite converter arquivos em
 diferentes formatos.[^2] Ela difere de linguagens normais por
 possibilitar o usuário escolher quais extensões do Markdown deseja
 utilizar, em outras palavras, ela possibilita configurar a sintaxe da
-linguagem. A Figura \ref{fig:rmarkdown} apresenta um subconjunto da
-linguagem.
+linguagem. 
+
+A Figura \ref{fig:rmarkdown} apresenta um subconjunto da linguagem. Na
+coluna esquerda (*syntax*) é apresentada a sintaxe da linguagem, na
+coluna do lado direito (*becomes*) temos a apresentação em HTML gerado
+a partir do código da esquerda. É possível ver a sintaxe para itálico,
+negrito, capítulos e seções (*headers*), listas, tabelas etc.
 
 \begin{figure}[htb]
 \caption{\label{fig:rmarkdown}Subconjunto da sintaxe do Markdown}
@@ -346,11 +351,11 @@ A *indentação* também é obrigatória para definir hierarquia. Na Figura
 \ref{fig:yaml}, a variável *affiliation* não estaria relacionada a
 *author* se não houvesse indentação.
 
-#### Inclusão de imagens e tabelas no markdown (Pandoc)
+#### Notações de imagens e tabelas do Markdown não são expressivas para atender requisitos da ABNT {#inclusao-imagens-e-tabelas}
 
 Nessa seção é apresentada a notação de inclusão de imagens e tabelas
-no Markdown do Pandoc e como ela são insuficientes para atender as
-especificações das Normas da ABNT.
+no Markdown do Pandoc *e como ela são insuficientes para atender as
+especificações das Normas da ABNT*.
 
 A notação para inserir imagens no Markdown é simples, sendo de fácil
 memorização e utilização:
@@ -386,8 +391,10 @@ Essa notação não permite configurar alinhamento, e nenhuma das demais
 notações permite a mesclagem de células.
 
 É válido mencionar que a edição de uma tabela no formato apresentado
-através de um editor de texto simples pode ser bastante tediosa. Veja
-o resultado de uma tentativa de edição:
+através de um editor de texto simples pode ser bastante tediosa. Na tabela
+a seguir é apresentada um possível problema de edição quando o editor
+não provém suporte a edição de tabelas com essa notação:
+
 
     +---------------+---------------+--------------------+
     | Fruit         | Price         | Advantages         |
@@ -402,7 +409,9 @@ Para que essa sintaxe seja utilizada facilmente é recomendado que o
 editor de texto implemente funcionalidades para auxiliar na edição.
 
 Mas nenhuma das sintaxes de Figura e Tabela possibilitam atender as
-especificações exigidas pelas Normas da ABNT.
+especificações exigidas pelas Normas da ABNT, pois *não proveem a
+notação para a Fonte* da Figura ou Tabela. E as tabelas *não possuem
+sintaxe para mesclagem de células*.
 
 ### Docbook
 
@@ -466,7 +475,7 @@ significados e grafias de alguns termos em inglês (tais como:
 ### ABNTFÁCIL: formatação de trabalhos acadêmicos ###
 
 A elaboração de uma linguagem para produção de trabalhos acadêmicos
-com em conformidade com as normas da ABNT não é algo inédito, existe
+em conformidade com as normas da ABNT não é algo inédito, existe
 um software nacional que implementa uma linguagem de marcação própria,
 concebida com esse propósito.
 
@@ -567,7 +576,7 @@ Através do software leitor de PDF e um documento com formulário é
 possível solicitar ao usuário dados que podem salvos e posteriormente
 processados.
 
-## Sistema = Notação + Ambiente ##
+## Sistema = Notação + Ambiente
 
 Um sistema é formado pelo conjunto Notação (linguagem) e o Ambiente de
 utilização. Não podemos avaliar uma linguagem separadamente do seu
@@ -599,7 +608,7 @@ desginer deverá ponderar sobre diversos aspectos da linguagem, entre
 eles:
 
 -->
-
+	
 ## Framework de Dimensões Cognitivas de Notações {#frameworkcd}
 
 Essa seção apresenta um *framework* para descrever a usabilidade de
@@ -989,7 +998,8 @@ e reprodutibilidade de pesquisa.
 
 No entanto, a linguagem de marcação de texto R Markdown não é
 expressiva o suficiente para atender as exigências das normas da ABNT
-para elaboração de trabalhos acadêmicos.
+para elaboração de trabalhos acadêmicos, conforme explicado na Seção
+\ref{inclusao-imagens-e-tabelas}.
 
 <!-- A utilização da ferramenta Pandoc para formatação de um trabalho
 acadêmico com as normas da ABNT requer a criação de um novo modelo (no
@@ -1083,25 +1093,32 @@ A solução temporária foi a geração de uma versão local com a
 atualização, e publicação dessa versão junto com a distribuição da
 ferramenta na sua primeira versão.
 
+
 # Proposta de Avaliação Experimental {#experimentos}
 
+A avaliação de usabilidade de uma linguagem deve ser realizada em
+conjunto com o sistema que a provém (Seção \ref{sistema-notauxe7uxe3o-ambiente}).
+O *framework* de Dimensões Cognitivas de Notação será método
+empregado para avaliar a usabilidade do sistema com a linguagem
+em desenvolvimento.
+
+<!-- PQ esse foi escolhido e outro não? -->
+
+Os experimentos de a avaliação da usabilidade do sistema podem ser
+realizados através de um *expert* do *framework* verificando o
+sistema, ou através de impressões de usuários do sistema. 
+
+Os dois tipos de experimentos serão realizados nessa pesquisa, e estão
+descritos a seguir.
+
+## Experimento com *expert* e contexto realístico
+
 O *framework* de Dimensões Cognitivas foi elaborado para ser utilizado
-por alguém que conheça bem o *framework* e também conheça bem o
-sistema \cite{CDquestionario}.
+por alguém que conheça bem o *framework* (um *expert*) e também
+conheça bem o sistema \cite{CDquestionario}.
 
 Por esse razão um experimento será realizado pelo autor desse
 trabalho, em contexto realístico, na elaboração de sua dissertação.
-
-O questionário elaborado em \cite{CDquestionario} e disponibilizado no
-Anexo \ref{anexoquestionario} tem o propósito de possibilitar uma
-avaliação através do *feedback* de usuários que não conhecem o
-*framework*.
-
-Esse questionário será utilizado em outros dois experimentos, um
-controlado e não realístico e outro não controlado (através da convite
-de utilização através da Internet).
-
-## Experimento com contexto realístico
 
 O autor desse trabalho irá utilizar o próprio sistema em
 desenvolvimento para a escrita de sua dissertação.
@@ -1111,20 +1128,25 @@ do sistema serão registrados informações referente a todas as
 dimensões cognitivas do *framework*, que irão compor a análise de
 usabilidade do sistema.
 
-## Experimento controlado e sem contexto realístico
+## Experimento com opiniões de usuários e contexto realístico
 
-Os usuários receberão uma capacitação e serão solicitados a realizarem
-diversas ações relacionadas a elaboração de uma monografia durante um
-determinado tempo.
+O questionário elaborado em \cite{CDquestionario} e disponibilizado no
+Anexo \ref{anexoquestionario} foi elaborado com o propósito de
+possibilitar uma avaliação através do *feedback* de usuários que não
+conhecem o *framework* de Dimensões Cognitivas de Notação.
+
+Os usuários receberão uma capacitação para utilização do sistema e
+serão solicitados a realizarem diversas ações relacionadas a
+elaboração de uma monografia durante um determinado tempo.
 
 Em seguida o questionário será preenchido através de entrevistas, com
 os *feedbacks* dos usuários.
 
-## Experimento não controlado com usuários da internet
+## Experimento não controlado e com opiniões de usuários da internet
 
 Com a publicação de uma *release* oficial da ferramenta, usuários
-serão convidados através de redes sociais para experimentação da
-ferramenta e realização de *feedbacks* através do preenchimento do
+serão convidados através de fóruns e redes sociais para experimentação
+da ferramenta e realização de *feedbacks* através do preenchimento do
 mesmo formulário do experimento anterior.
 
 # Cronograma #

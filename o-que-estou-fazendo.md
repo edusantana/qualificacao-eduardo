@@ -1,5 +1,9 @@
 # O que você está fazendo? Para atingir qual propósito?
 
+## Ter Ago 30 08:56:28 BRT 2016
+
+
+
 ## Sex Ago 26 15:44:51 BRT 2016
 
 Atualizando as dimensões. Para concluir a proposta.
