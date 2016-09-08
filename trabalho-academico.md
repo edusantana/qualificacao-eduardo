@@ -479,7 +479,7 @@ em conformidade com as normas da ABNT não é algo inédito, existe
 um software nacional que implementa uma linguagem de marcação própria,
 concebida com esse propósito.
 
-\begin{figure}[htb]
+\begin{figure}[htbp]
 \caption{\label{fig_abntfacil_apresentacao}Apresentação do Software ABNTFÁCIL}
 \begin{center}
 \includegraphics[width=0.85000\textwidth]{imagens/abntfacil-apresentacao.jpg}
